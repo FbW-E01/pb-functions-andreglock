@@ -11,18 +11,11 @@ const addUp = (integer) => {
 
 console.log('1:', addUp(13));
 
-function sumCubes(a, b, c) {
-    if (typeof(a) !== 'number') {
-        a = 0;
-    } if (typeof(b) !== 'number') {
-        b = 0;
-    } if (typeof(c) !== 'number') {
-        c = 0;
-    }
+function sumCubes(a = 0, b = 0, c = 0) {
     return a ** 3 + b ** 3 + c ** 3;
 }
 
-console.log('2:', sumCubes());
+console.log('2:', sumCubes(3));
 
 function stringCheck(string, word) {
     if(typeof(string) !== 'string' || typeof(word) !== 'string') {
@@ -55,7 +48,7 @@ function countOccurrences(string, letter) {
     return check.length - 1;
 }
 
-console.log('5:', countOccurrences('this is a string', 'i'));
+console.log('5:', countOccurrences('this is a string', 's'));
 
 const calcBaseToExponent = (a, b) => a ** b;
 
