@@ -95,16 +95,20 @@ function isWaldoHere(here) {
     if(typeof(here) !== 'string') {
         return 'not a string';
     }
-    let check = here.toLowerCase().split('waldo');
+    
+    return here.toLowerCase().includes('waldo');
+    
+    /*let check = here.toLowerCase().split('waldo');
 
     if(check.length > 1) {
         return true;
     } else {
         return false;
-    }
+    } */
 }
 
 console.log('9:', isWaldoHere('I found you Waldo!'));
+console.log('9:', isWaldoHere(`He isn't here!`));
 
 const isEqualSlices = (slices, people, each) => people * each < slices;
 
